@@ -79,13 +79,53 @@ function calculateIndividualEmployeeBonus(employee) {  //this employee parameter
   for (let person of employees) {
     if (person.name === employee) {                     //checking for a match withing employees array
       console.log('You have found a match!:', employee);
-      if (person.reviewRating = 3) {
+      if (person.reviewRating = 3 && person.employeeNumber.length===4) {
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.09, totalCompensation:person.annualSalary * 1.09 , totalBonus: person.annualSalary * .09 });
+        console.log('review rating is equal to 3');   //had to hardcode the percentage params. 
+      }
+      else if (person.reviewRating = 3) {
         console.log('this is the name of the match:', person.name);
         console.log('the annual salary is:', person.annualSalary);
         bonusDetails.push({ name: person.name, bonusPercentage:1.04, totalCompensation:person.annualSalary * 1.04 , totalBonus: person.annualSalary * .04 });
         console.log('review rating is equal to 3');   //had to hardcode the percentage params. 
       }
-      
+  
+      else if (person.reviewRating = 4 && person.employeeNumber.length===4) {
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.06, totalCompensation:person.annualSalary * 1.06 , totalBonus: person.annualSalary * .06 });
+        console.log('review rating is equal to 4');   //had to hardcode the percentage params. 
+      }
+
+      else if (person.reviewRating = 4) {
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.06, totalCompensation:person.annualSalary * 1.06 , totalBonus: person.annualSalary * .06 });
+        console.log('review rating is equal to 4');   //had to hardcode the percentage params. 
+      }
+
+      else if (person.reviewRating = 5) {
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.10, totalCompensation:person.annualSalary * 1.10 , totalBonus: person.annualSalary * .10 });
+        console.log('review rating is equal to 5');   //had to hardcode the percentage params. 
+      }
+      else if (person.reviewRating = 2) {
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.00, totalCompensation:person.annualSalary * 1.00 , totalBonus: person.annualSalary * .00 });
+        console.log('review rating is equal to 2');   //had to hardcode the percentage params. 
+      }
+      else if (person.reviewRating = 1) {
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.00, totalCompensation:person.annualSalary * 1.00 , totalBonus: person.annualSalary * .00 });
+        console.log('review rating is equal to 1');   //had to hardcode the percentage params. 
+      }
+
+
       console.log('bonus detals', bonusDetails);  //testing new object creation with required properties
     }
   }
