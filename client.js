@@ -80,9 +80,12 @@ function calculateIndividualEmployeeBonus(employee) {  //this employee parameter
     if (person.name === employee) {                     //checking for a match withing employees array
       console.log('You have found a match!:', employee);
       if (person.reviewRating = 3) {
-        console.log('review rating is equal to 3');
+        console.log('this is the name of the match:', person.name);
+        console.log('the annual salary is:', person.annualSalary);
+        bonusDetails.push({ name: person.name, bonusPercentage:1.04, totalCompensation:person.annualSalary * 1.04 , totalBonus: person.annualSalary * .04 });
+        console.log('review rating is equal to 3');   //had to hardcode the percentage params. 
       }
-      bonusDetails.push({ name: person.name, bonusPercentage: 'testPercentage', totalCompensation: 'testCompensation', totalBous: 'testBonus' });
+      
       console.log('bonus detals', bonusDetails);  //testing new object creation with required properties
     }
   }
@@ -91,6 +94,8 @@ function calculateIndividualEmployeeBonus(employee) {  //this employee parameter
   // return new object with bonus results
   return
 }
+
+// bonusPercentage:.04, totalCompensation: (person.annualSalary * bonusPercentage) += annualSalary, totalBonus: person.annualSalary * bonusPercentage  });
 calculateIndividualEmployeeBonus('Atticus');  //testing if for loop will find atticus in 'employees' array. 
 calculateIndividualEmployeeBonus('Barbara');
 
